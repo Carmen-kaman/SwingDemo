@@ -1,3 +1,5 @@
+package app;
+
 import javax.swing.*;
 import java.awt.*;
 import java.awt.event.ActionEvent;
@@ -8,10 +10,11 @@ public class Toolbar extends JPanel implements ActionListener {
     private  JButton helloButton;
     private  JButton goodButton;
 
-//    private TextPanel textPanel;
+//    private app.TextPanel textPanel;
     private StringListener textListener;
 
     public Toolbar(){
+        setBorder(BorderFactory.createEmptyBorder());
         helloButton = new JButton("Hello");
         goodButton = new JButton("GoodBye");
 
@@ -24,7 +27,7 @@ public class Toolbar extends JPanel implements ActionListener {
         add(goodButton);
     }
 
-//    public void setTextPanel (TextPanel textPanel){
+//    public void setTextPanel (app.TextPanel textPanel){
 //        this.textPanel = textPanel;
 //    }
     public void setStringListener (StringListener listener){
